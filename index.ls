@@ -26,14 +26,14 @@ plugin = (opts) ->
                 data = files[file]
                 dir = dirname[file]
                 html = file.replace fnmatch \.html
-                str = textile data.contents.to-string(), options
+                str = textile data.contents.to-string!, options
                 try
                   data.contents = Buffer.from str
                 catch e
                   data.contents new Buffer str
                   for i in keys
                      if data[i]
-                        data[i] = textile data[key].to-string(),options
+                        data[i] = textile data[key].to-string!,options
                 delete files[file]
                 files[html] = data
                    
