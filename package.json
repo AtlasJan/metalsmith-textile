@@ -1,0 +1,33 @@
+{
+  "name": "metalsmith-textile",
+  "version": "1.0.0",
+  "description": "Textile support for Metalsmith",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtlasJan/metalsmith-textile.git"
+  },
+  "keywords": [
+    "metalsmith",
+    "textile-lang",
+    "plugin"
+  ],
+  "author": "Archie Sullivan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AtlasJan/metalsmith-textile/issues"
+  },
+  "homepage": "https://github.com/AtlasJan/metalsmith-textile#readme",
+  "dependencies": {
+    "debug": "^4.1.0",
+    "textile": "0.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-livescript": "^3.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
