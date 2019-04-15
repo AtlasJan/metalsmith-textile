@@ -1,9 +1,8 @@
-textile = require \textile
-dirname = require \path
-   .dirname
-extname = require \path
-   .extname
-debug = require('debug')('metalsmith-textile')
+require! {
+textile
+path: {dirname, extname}:path
+}
+debug = require(\debug) \metalsmith-textile
 
 fnmatch = /txti$|textile$/
 
