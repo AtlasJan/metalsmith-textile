@@ -26,8 +26,8 @@
     "textile": "0.0.1"
   },
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-livescript": "^3.0.1",
-    "gulp-sourcemaps": "^2.6.4"
+    "grunt": "^1.0.4",
+    "grunt-livescript": "^0.6.0",
+    "npx": "^10.2.0"
   }
 }

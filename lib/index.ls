@@ -1,3 +1,6 @@
+/* Forked from `metalsmith-markdown` by GitHub:segmentio
+*  <https://github.com/segmentio/metalsmith-markdown> */
+
 require! {
 textile
 path: {dirname, extname}:path
@@ -35,5 +38,6 @@ plugin = (opts) ->
                         data[i] = textile data[key].to-string!,options
                 delete files[file]
                 files[html] = data
-                   
+
 module.exports = plugin
+
