@@ -1,5 +1,9 @@
 node_modules
-npm-debug.log*
+*.log*
 .DS_Store
 build/
 *.js
+*.tgz
+*.swp
+*~
+\#*\#

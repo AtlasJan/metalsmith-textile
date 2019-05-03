@@ -7,7 +7,7 @@ path: {dirname, extname}:path
 }
 debug = require(\debug) \metalsmith-textile
 
-fnmatch = /txti$|textile$/
+fnmatch = /txti$|txtl$|textile$/
 
 /**
 * Check if a file is a textile file 
@@ -15,19 +15,19 @@ fnmatch = /txti$|textile$/
 * @param string fn
 * @return boolean
 */
-txti = (fn) ->
-  fnmatch.test extname fn
+txti = (fn) -> fnmatch.test extname fn
 
-plugin = (opts) ->
-     opts.pattern = if opts? then opts else {}
-     keys = if opts.keys? then opts.keys else []
+module.exports = (options) ->
+     options = if options? then options else {}
+     keys = if options.keys? then options.keys else []
      (files,metalsmith,done) ->
-           set-immediate(done)
+           set-immediate done
            for file, value of files
                 return if !txti file
                 data = files[file]
                 dir = dirname[file]
-                html = file.replace fnmatch \.html
+                html = file.replace fnmatch, \.html
+                debug 'converting file: %s' file
                 str = textile data.contents.to-string!, options
                 try
                   data.contents = Buffer.from str
@@ -38,6 +38,4 @@ plugin = (opts) ->
                         data[i] = textile data[key].to-string!,options
                 delete files[file]
                 files[html] = data
-
-module.exports = plugin
 
