@@ -2,7 +2,7 @@
 *  <https://github.com/segmentio/metalsmith-markdown> */
 
 require! {
-textile
+'textile-js': textile
 path: {dirname, extname}:path
 }
 debug = require(\debug) \metalsmith-textile
@@ -26,7 +26,7 @@ module.exports = (options) ->
                 return if !txti file
                 data = files[file]
                 dir = dirname[file]
-                html = file.replace fnmatch, \.html
+                html = file.replace fnmatch, \html
                 debug 'converting file: %s' file
                 str = textile data.contents.to-string!, options
                 try

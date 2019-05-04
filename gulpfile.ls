@@ -14,7 +14,7 @@ require! {
   cb!
 
 !function clean(cb)
-  del [\*.js \*.log \*.tgz] cb
+  del [\*.js \*.log \*.tgz \*.html] cb
 
 exports.build = build
 exports.clean = clean
