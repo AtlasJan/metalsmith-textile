@@ -32,7 +32,6 @@
     "gulp-cli": "^2.2.0",
     "gulp-eslint": "^5.0.0",
     "gulp-livescript": "^3.0.1",
-    "gulp-rename": "^1.4.0",
     "livescript": "^1.6.0",
     "mocha": "^6.1.4"
   },

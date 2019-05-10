@@ -3,12 +3,11 @@ require! {
   fs
   delete: del
   'gulp-livescript': lsc
-  'gulp-rename': rename
 }
 
 
 !function build(cb)
-  src \lib/*.ls
+  src [\lib/*.ls \*.ls]
     .pipe lsc bare:true
     .pipe dest \./
   cb!
@@ -16,6 +15,5 @@ require! {
 !function clean(cb)
   del [\*.js \*.log \*.tgz \*.html] cb
 
-exports.build = build
-exports.clean = clean
-exports.default = build
+export build, clean
+out$.default = build
