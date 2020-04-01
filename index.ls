@@ -23,7 +23,7 @@ module.exports = (options) ->
      (files,metalsmith,done) ->
            set-immediate done
            for file, value of files
-                return if !txti file
+                continue if !txti file
                 data = files[file]
                 dir = dirname[file]
                 html = file.replace fnmatch, \html
